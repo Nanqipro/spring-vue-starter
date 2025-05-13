@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Java_base/Java_base.iml" filepath="$PROJECT_DIR$/Java_base/Java_base.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spring-vue-starter.iml" filepath="$PROJECT_DIR$/.idea/spring-vue-starter.iml" />
     </modules>
   </component>
