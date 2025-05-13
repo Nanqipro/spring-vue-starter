@@ -7,10 +7,21 @@
         <option value="$PROJECT_DIR$/Spring-boot-quickStarter/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-quickstart/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-profiles/pom.xml" />
+        <option value="$PROJECT_DIR$/dmybatis-spring-boot-autoconfigure/pom.xml" />
+        <option value="$PROJECT_DIR$/dmybatis-spring-boot-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-auto-config/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-config-file/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-register/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Spring-boot-quickStarter/pom.xml" />
+      </set>
+    </option>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="openjdk-24" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_24" default="true" project-jdk-name="openjdk-24" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
