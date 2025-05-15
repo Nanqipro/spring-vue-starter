@@ -8,13 +8,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springboot-config-file" />
-        <module name="dmybatis-spring-boot-autoconfigure" />
-        <module name="springboot-auto-config" />
+        <module name="spring_07_di_autoware" />
         <module name="springboot-quickstart" />
-        <module name="springboot-mybatis" />
-        <module name="springboot-profiles" />
+        <module name="spring_01_quickstart" />
         <module name="dmybatis-spring-boot-starter" />
         <module name="springboot-register" />
+        <module name="spring_05_di_set" />
+        <module name="spring_08_di_collection" />
+        <module name="spring_06_di_constructor" />
+        <module name="spring_02_base_config" />
+        <module name="dmybatis-spring-boot-autoconfigure" />
+        <module name="springboot-auto-config" />
+        <module name="springboot-mybatis" />
+        <module name="springboot-profiles" />
+        <module name="spring_03_bean_instance" />
+        <module name="spring_04_bean_lifecycle" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
