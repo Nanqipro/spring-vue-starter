@@ -15,6 +15,7 @@
         <module name="springboot-register" />
         <module name="spring_05_di_set" />
         <module name="spring_08_di_collection" />
+        <module name="big-event" />
         <module name="spring_06_di_constructor" />
         <module name="spring_02_base_config" />
         <module name="dmybatis-spring-boot-autoconfigure" />
@@ -32,6 +33,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Spring-boot-quickStarter" options="-parameters" />
+      <module name="big-event" options="-parameters" />
       <module name="springboot-auto-config" options="-parameters" />
       <module name="springboot-config-file" options="-parameters" />
       <module name="springboot-mybatis" options="-parameters" />
