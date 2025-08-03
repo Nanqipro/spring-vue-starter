@@ -1,4 +1,10 @@
+D:\GitHub_local\spring-vue-starter\big-event\src\main\java\com\goodlab\controller\UserController.java
+D:\GitHub_local\spring-vue-starter\big-event\src\main\java\com\goodlab\service\impl\UserServiceImpl.java
+D:\GitHub_local\spring-vue-starter\big-event\src\main\java\com\goodlab\pojo\User.java
+D:\GitHub_local\spring-vue-starter\big-event\src\main\java\com\goodlab\pojo\Category.java
+D:\GitHub_local\spring-vue-starter\big-event\src\main\java\com\goodlab\mapper\UserMapper.java
+D:\GitHub_local\spring-vue-starter\big-event\src\main\java\com\goodlab\utils\Md5Util.java
 D:\GitHub_local\spring-vue-starter\big-event\src\main\java\com\goodlab\BigEventApplication.java
 D:\GitHub_local\spring-vue-starter\big-event\src\main\java\com\goodlab\pojo\Article.java
-D:\GitHub_local\spring-vue-starter\big-event\src\main\java\com\goodlab\pojo\Category.java
-D:\GitHub_local\spring-vue-starter\big-event\src\main\java\com\goodlab\pojo\User.java
+D:\GitHub_local\spring-vue-starter\big-event\src\main\java\com\goodlab\service\UserService.java
+D:\GitHub_local\spring-vue-starter\big-event\src\main\java\com\goodlab\pojo\Result.java

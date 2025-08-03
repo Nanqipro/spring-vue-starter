@@ -20,7 +20,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void register(String username, String password) {
-        // 加密
+        // 加密， 将明文改成密文
         String md5String = Md5Util.getMD5String(password);
 
         // 添加
