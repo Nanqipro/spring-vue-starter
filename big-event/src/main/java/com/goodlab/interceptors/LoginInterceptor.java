@@ -3,6 +3,7 @@ package com.goodlab.interceptors;
 
 import com.goodlab.pojo.Result;
 import com.goodlab.utils.JwtUtil;
+import com.goodlab.utils.ThreadLocalUtil;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;
@@ -21,6 +22,10 @@ public class LoginInterceptor implements HandlerInterceptor {
         // 验证token
         try {
             Map<String, Object> claims = JwtUtil.parseToken(token);
+
+            // 把业务数据存储到ThreadLocal中
+            ThreadLocalUtil.set(claims);
+
             return true ;
         } catch (Exception e) {
             // http 401
@@ -28,5 +33,9 @@ public class LoginInterceptor implements HandlerInterceptor {
             return false;
         }
 
+    }
+    @Override
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+        ThreadLocalUtil.remove();
     }
 }
