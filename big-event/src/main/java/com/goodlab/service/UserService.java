@@ -8,4 +8,6 @@ public interface UserService {
     User findByUserName(String username);
     // 注册用户
     void register(String username, String password);
+    // 更新用户数据
+    void update(User user);
 }
