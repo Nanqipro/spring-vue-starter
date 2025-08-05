@@ -33,7 +33,7 @@ public class JwtTest {
     public void testParse(){
 
         // 定义字符串模拟用户传递过来的token
-        String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiMSIsInVzZXJuYW1lIjoiYWRtaW4ifSwiZXhwIjoxNzU0MjcwMzc3fQ.TqIjvEs7L5g8nlkRSUC-nY3fsdfZ9yB7op1Ho3ZCzCo";
+        String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiMSIsInVzZXJuYW1lIjoiYWRtaW4ifSwiZXhwIjoxNzU0NDQxNzE4fQ.CpHB6wNkC3nUTQ3X1ivUXOCMuVy6qID292YihyB7RGc";
         JWTVerifier jwtVerifier =  JWT.require(Algorithm.HMAC256("bigevent")).build();
 
 
