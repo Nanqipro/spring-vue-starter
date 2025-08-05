@@ -2,6 +2,7 @@ package com.goodlab.mapper;
 
 
 import com.goodlab.pojo.Category;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -25,4 +26,8 @@ public interface CategoryMapper {
     // 更新 分类
     @Update("update category set category_name=#{categoryName}, category_alias=#{categoryAlias}, update_time=#{updateTime} where id=#{id}")
     void update(Category category);
+
+    //删除 分类
+    @Delete("delete from category where id = #{id}")
+    void delete(Integer id);
 }
