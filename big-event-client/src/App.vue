@@ -1,14 +1,12 @@
-<!--js 逻辑部分-->
 <script setup>
-  import Buttern from './Buttern.vue'
-  import Article from './Article.vue'
+  import Login from './views/Login.vue'
 
 </script>
 
-<!--html-->
 <template>
-  <!-- <Buttern /> -->
-  <Article/>
+  <Login />
 </template>
 
+<style scoped>
 
+</style>
