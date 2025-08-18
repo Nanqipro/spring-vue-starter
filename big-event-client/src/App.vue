@@ -1,14 +1,14 @@
 <!--js 逻辑部分-->
-<script>
-  import APIVue from './API.vue'
+<script setup>
+  import Buttern from './Buttern.vue'
+  import Article from './Article.vue'
+
 </script>
 
 <!--html-->
 <template>
-  <APIVue />
+  <!-- <Buttern /> -->
+  <Article/>
 </template>
 
-<!--css-->
-<style scoped>
 
-</style>
