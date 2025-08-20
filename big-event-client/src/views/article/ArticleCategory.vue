@@ -56,7 +56,7 @@ const rules = {
 }
 // 调用接口添加表单
 import { articleCategoryAddService } from '@/api/article.js'
-import { ElMessage } from 'element-plus'
+import { ElMessage, ElMessageBox } from 'element-plus'
 
 const addCategory = async () => {
     let res = await articleCategoryAddService(categoryModel.value)
@@ -89,7 +89,45 @@ const updateCategory = async () => {
     // 隐藏弹窗
     dialogVisible.value = false
 }
+// 清空模型的数据
+const clearCategoryModel = () => {
+    categoryModel.value.categoryName = ''
+    categoryModel.value.categoryAlias = ''
+}
+// 删除分类
+import { articleCategoryDeleteService } from '@/api/article.js'
 
+const deleteCategory = async (row) => {
+
+    // 确认删除
+    ElMessageBox.confirm(
+        'proxy will permanently delete the file. Continue?',
+        'Warning',
+        {
+        confirmButtonText: 'OK',
+        cancelButtonText: 'Cancel',
+        type: 'warning',
+        }
+    )
+        .then(async() => {
+            let res = await articleCategoryDeleteService(row.id)
+            ElMessage({
+                type: 'success',
+                message: 'Delete completed',
+            })
+
+            // 刷新列表数据
+            articleCategoryList()
+
+        })
+
+        .catch(() => {
+            ElMessage({
+                type: 'info',
+                message: 'Delete canceled',
+            })
+        })
+}
 
 
 </script>
@@ -99,7 +137,7 @@ const updateCategory = async () => {
             <div class="header">
                 <span>文章分类</span>
                 <div class="extra">
-                    <el-button type="primary" @click="dialogVisible = true;title = '添加分类'">添加分类</el-button>
+                    <el-button type="primary" @click="dialogVisible = true;title = '添加分类';clearCategoryModel()">添加分类</el-button>
 
                 </div>
             </div>
@@ -111,9 +149,9 @@ const updateCategory = async () => {
             <el-table-column label="操作" width="100">
                 <template #default="{ row }">
                     <el-button :icon="Edit" circle plain type="primary" @click="showDialog(row)"></el-button>
+                    <el-button :icon="Delete" circle plain type="danger" @click="deleteCategory(row)"></el-button>
 
 
-                    <el-button :icon="Delete" circle plain type="danger"></el-button>
                 </template>
             </el-table-column>
             <template #empty>

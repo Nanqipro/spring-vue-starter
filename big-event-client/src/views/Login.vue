@@ -1,8 +1,12 @@
 <script setup>
 import { User, Lock } from '@element-plus/icons-vue'
-// import { ElMessage } from 'element-plus'
 import { ref } from 'vue'
 import { ElMessage } from 'element-plus'
+import { userRegisterService, userLoginService } from '@/api/user.js'
+import { useUserStore } from '@/store/user.js'
+import { useRouter } from 'vue-router'
+import { useTokenStore } from '@/store/token.js'
+
 //控制注册与登录表单的显示， 默认显示注册
 const isRegister = ref(false)
 // 定义数据模型
@@ -39,7 +43,6 @@ const rules = ref({
 })
 
 // 调用后台接口，完成注册
-import { userRegisterService,userLoginService } from '@/api/user.js'
 const register = async () => {
     let res = await userRegisterService(registerData.value)
     // if(res.code === 0){
@@ -51,9 +54,6 @@ const register = async () => {
     ElMessage.success(res.msg || '注册成功')
 }
 
-import { useUserStore } from '@/store/user.js'
-import { useRouter } from 'vue-router'
-import { useTokenStore } from '@/store/token.js'
 const tokenStore = useTokenStore()
 const router = useRouter()
 // 登录表单绑定数据 复用注册时候的表单数据模型

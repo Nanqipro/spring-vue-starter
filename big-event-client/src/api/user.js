@@ -23,3 +23,29 @@ export const userLoginService = (loginData) => {
     })
 }
 // 提供调用获取用户信息接口的函数
+export const userInfoService = () => {
+    return request({
+        method:'GET',
+        url:'/user/userInfo'
+    })
+}
+// 修改个人信息
+export const updateUserInfoService = (userInfo) => {
+    return request({
+        method:'PUT',
+        url:'/user/userInfo',
+        data:userInfo
+    })
+}
+
+
+// 更新头像
+export const updateAvatarService = (avatar) => {
+    const params = new URLSearchParams()
+    params.append('avatar', avatar)
+    return request({
+        method:'PATCH',
+        url:'/user/avatar',
+        data:params
+    })
+}

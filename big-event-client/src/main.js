@@ -5,13 +5,12 @@ import 'element-plus/dist/index.css'
 import App from './App.vue'
 import router from '@/router'
 import { createPinia } from 'pinia'
-import { createPersistedStatePlugin } from 'pinia-persistedstate-plugin'
 const app = createApp(App)
 
+// 创建 Pinia 实例
+const pinia = createPinia()
+
 app.use(ElementPlus)
-app.use(createPinia())
+app.use(pinia)
 app.use(router)
 app.mount('#app')
-
-const persistedStatePlugin = createPersistedStatePlugin()
-pinia.use(persistedStatePlugin)

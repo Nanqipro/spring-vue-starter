@@ -33,7 +33,7 @@ export const articleCategoryAddService = (data) => {
 export const articleCategoryDeleteService = (id) => {
     return request({
         method:'DELETE',
-        url:`/category/${id}`
+        url:`/category?id=${id}`
     })
 }
 
@@ -42,6 +42,24 @@ export const articleCategoryUpdateService = (data) => {
     return request({
         method:'PUT',
         url:'/category',
+        data
+    })
+}
+
+// 文章列表查询
+export const articleListService = (params) => {
+    return request({
+        method:'GET',
+        url:'/article',
+        params
+    })
+}
+
+// 文章添加
+export const articleAddService = (data) => {
+    return request({
+        method:'POST',
+        url:'/article',
         data
     })
 }

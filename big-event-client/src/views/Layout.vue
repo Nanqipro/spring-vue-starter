@@ -7,9 +7,70 @@ import {
     Crop,
     EditPen,
     SwitchButton,
-    CaretBottom
+    CaretBottom,
+    Avatar
 } from '@element-plus/icons-vue'
 import avatar from '@/assets/default.png'
+import { useUserInfoStore } from '@/store/userInfo'
+const userInfoStore = useUserInfoStore()
+// 调用函数 获取用户信息
+import { userInfoService } from '@/api/user'
+const getUserInfo = async () => {
+    let res = await userInfoService()
+    // 数据存储到pinia中
+    userInfoStore.setInfo(res.data)
+}
+// 调用
+getUserInfo()
+// 引入路由
+import { useRouter } from 'vue-router'
+const router = useRouter()
+// 引入消息提示
+import { ElMessage, ElMessageBox } from 'element-plus'
+import {useTokenStore} from '@/store/token'
+const tokenStore = useTokenStore()
+
+// 条目被点击后调用的函数
+const handleCommand = (command) => {
+    // 判断指令
+    if (command === 'logout') {
+        // 确认退出登录
+        ElMessageBox.confirm(
+            'Are you sure you want to log out?',
+            'Warning',
+            {
+            confirmButtonText: 'OK',
+            cancelButtonText: 'Cancel',
+            type: 'warning',
+            }
+        )
+            .then(async() => {
+                // let res = await logoutService()
+                //     ElMessage({
+                //         type: 'success',
+                //         message: 'Logout successful',
+                //     })
+                    // 清空pinia中的数据
+                    userInfoStore.clearInfo()
+                    tokenStore.clearToken()
+                    // 跳转到登录页
+                    router.push('/login')
+                }
+            )
+
+            .catch(() => {
+                ElMessage({
+                    type: 'info',
+                    message: 'Logout failed',
+                })
+            })
+    }else{
+        router.push(`/user/${command}`)
+    }
+}
+
+
+
 </script>
 
 <template>
@@ -63,19 +124,20 @@ import avatar from '@/assets/default.png'
         <el-container>
             <!-- 头部区域 -->
             <el-header>
-                <div>黑马程序员：<strong>东哥</strong></div>
-                <el-dropdown placement="bottom-end">
+                <div>黑马程序员：<strong>{{userInfoStore.info.name}}</strong></div>
+
+                <el-dropdown placement="bottom-end" @command="handleCommand">
                     <span class="el-dropdown__box">
-                        <el-avatar :src="avatar" />
+                        <el-avatar :src="useUserInfoStore.info.userPic?useUserInfoStore.info.userPic:avatar" />
                         <el-icon>
                             <CaretBottom />
                         </el-icon>
                     </span>
                     <template #dropdown>
                         <el-dropdown-menu>
-                            <el-dropdown-item command="profile" :icon="User">基本资料</el-dropdown-item>
+                            <el-dropdown-item command="info" :icon="User">基本资料</el-dropdown-item>
                             <el-dropdown-item command="avatar" :icon="Crop">更换头像</el-dropdown-item>
-                            <el-dropdown-item command="password" :icon="EditPen">重置密码</el-dropdown-item>
+                            <el-dropdown-item command="reset-password" :icon="EditPen">重置密码</el-dropdown-item>
                             <el-dropdown-item command="logout" :icon="SwitchButton">退出登录</el-dropdown-item>
                         </el-dropdown-menu>
                     </template>
