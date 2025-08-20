@@ -2,6 +2,7 @@
 import { User, Lock } from '@element-plus/icons-vue'
 // import { ElMessage } from 'element-plus'
 import { ref } from 'vue'
+import { ElMessage } from 'element-plus'
 //控制注册与登录表单的显示， 默认显示注册
 const isRegister = ref(false)
 // 定义数据模型
@@ -41,12 +42,20 @@ const rules = ref({
 import { userRegisterService,userLoginService } from '@/api/user.js'
 const register = async () => {
     let res = await userRegisterService(registerData.value)
-    if(res.code === 0){
-        alert('注册成功')
-    }else{
-        alert(res.message || '注册失败')
-    }
+    // if(res.code === 0){
+    //     alert('注册成功')
+    // }else{
+    //     alert(res.message || '注册失败')
+    // }
+    // alert(res.msg || '注册成功')
+    ElMessage.success(res.msg || '注册成功')
 }
+
+import { useUserStore } from '@/store/user.js'
+import { useRouter } from 'vue-router'
+import { useTokenStore } from '@/store/token.js'
+const tokenStore = useTokenStore()
+const router = useRouter()
 // 登录表单绑定数据 复用注册时候的表单数据模型
 const loginData = ref({
     username:'',
@@ -66,11 +75,18 @@ const loginRules = ref({
 // 登录表单提交
 const login = async () => {
     let res = await userLoginService(loginData.value)
-    if(res.code === 0){
-        alert('登录成功')
-    }else{
-        alert(res.message || '登录失败')
-    }
+    // if(res.code === 0){
+    //     alert('登录成功')
+    // }else{
+    //     alert(res.message || '登录失败')
+    // }
+    // alert(res.msg || '登录成功')
+    ElMessage.success(res.msg || '登录成功')
+    // 登录成功后，将token保存到store中
+    tokenStore.setToken(res.data)   
+    // 跳转到首页
+    router.push('/layout')
+    
 }
 
 // 定义函数用于清空数据模型的数据
