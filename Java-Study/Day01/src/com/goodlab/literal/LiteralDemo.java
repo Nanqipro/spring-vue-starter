@@ -31,5 +31,6 @@ public class LiteralDemo {
         System.out.println("hello\rworld"); // \r 回车
         System.out.println("hello\bworld"); // \b 退格
         System.out.println("hello\fworld"); // \f 换页
+        System.out.println("hello\'world"); // \' 单引号
     }
 }
