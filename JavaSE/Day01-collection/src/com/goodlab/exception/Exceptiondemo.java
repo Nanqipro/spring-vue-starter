@@ -5,7 +5,7 @@ public class Exceptiondemo {
         // 认识异常的作用
         System.out.println("程序开始执行");
         try {
-            System.out.println(div(10, 0));
+            System.out.println(div(10, 3));
             System.out.println("底层方法执行成功了");
         } catch (Exception e) {
             e.printStackTrace();
