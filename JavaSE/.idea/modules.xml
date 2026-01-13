@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Day01-collection/Day01-collection.iml" filepath="$PROJECT_DIR$/Day01-collection/Day01-collection.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaSE.iml" filepath="$PROJECT_DIR$/JavaSE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-aop-quickstart/src/main/main2.iml" filepath="$PROJECT_DIR$/springboot-aop-quickstart/src/main/main2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-aop-quickstart/src/test/test2.iml" filepath="$PROJECT_DIR$/springboot-aop-quickstart/src/test/test2.iml" />
     </modules>
   </component>
 </project>
