@@ -9,7 +9,11 @@
               <option name="easy" value="82" />
               <option name="hard" value="6" />
               <option name="medium" value="81" />
+<<<<<<< HEAD
               <option name="questionTotal" value="4234" />
+=======
+              <option name="questionTotal" value="4226" />
+>>>>>>> b3bdaa487d09cac6ced3617ce5ebc21646b7a8d4
               <option name="solvedTotal" value="169" />
             </Statistics>
           </value>
