@@ -28,7 +28,7 @@ class HeimaAiApplicationTests {
 
     @Test
     public void testVectorStore(){
-        Resource resource = new FileSystemResource("中二知识笔记.pdf");
+        Resource resource = new FileSystemResource("MUST_READ_IN_GOOD_V2.pdf");
         // 1.创建PDF的读取器
         PagePdfDocumentReader reader = new PagePdfDocumentReader(
                 resource, // 文件源
@@ -43,10 +43,10 @@ class HeimaAiApplicationTests {
         vectorStore.add(documents);
         // 4.搜索
         SearchRequest request = SearchRequest.builder()
-                .query("论语中教育的目的是什么")
+                .query("KPI满足多少分才能毕业")
                 .topK(1)
                 .similarityThreshold(0.6)
-                .filterExpression("file_name == '中二知识笔记.pdf'")
+                .filterExpression("file_name == 'MUST_READ_IN_GOOD_V2.pdf'")
                 .build();
         List<Document> docs = vectorStore.similaritySearch(request);
         if (docs == null) {

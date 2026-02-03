@@ -416,7 +416,8 @@ public class AlibabaOpenAiChatModel extends AbstractToolCallSupport implements C
                 .toolCalls()
                 .stream()
                 .map(toolCall -> new AssistantMessage.ToolCall(toolCall.id(), "function",
-                        toolCall.function().name(), toolCall.function().arguments()))
+                        toolCall.function().name(),
+                        StringUtils.hasText(toolCall.function().arguments()) ? toolCall.function().arguments() : "{}"))
                 .reduce((tc1, tc2) -> new AssistantMessage.ToolCall(tc1.id(), "function", tc1.name(), tc1.arguments() + tc2.arguments()))
                 .stream()
                 .toList();
