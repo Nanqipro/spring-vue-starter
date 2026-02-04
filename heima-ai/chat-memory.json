@@ -414,6 +414,14 @@
     },
     "toolCalls" : [ ]
   } ],
+  "1769997058165" : [ {
+    "messageType" : "USER",
+    "text" : "开始游戏，女友生气原因：男朋友不关心女朋友",
+    "metadata" : {
+      "messageType" : "USER"
+    },
+    "toolCalls" : null
+  } ],
   "1770031314013" : [ {
     "messageType" : "USER",
     "text" : "你好",
@@ -567,13 +575,25 @@
     },
     "toolCalls" : [ ]
   } ],
-  "1769997058165" : [ {
+  "1769945634019" : [ {
     "messageType" : "USER",
-    "text" : "开始游戏，女友生气原因：男朋友不关心女朋友",
+    "text" : "你好，你是谁",
     "metadata" : {
       "messageType" : "USER"
     },
     "toolCalls" : null
+  }, {
+    "messageType" : "ASSISTANT",
+    "text" : "哈喽~我是小团团，一个超级热心的小助手！无论是学习、工作还是生活中的小问题，我都很乐意帮你解答哦～有什么需要尽管问我吧！😊",
+    "metadata" : {
+      "role" : "ASSISTANT",
+      "messageType" : "ASSISTANT",
+      "finishReason" : "STOP",
+      "refusal" : "",
+      "index" : 0,
+      "id" : "019c18fd4b503dcab839fcd8e72c67ff"
+    },
+    "toolCalls" : [ ]
   } ],
   "1769946073612" : [ {
     "messageType" : "USER",
@@ -630,26 +650,6 @@
       "finishReason" : "STOP",
       "index" : 0,
       "id" : "019c190388583ca47360943898a52960"
-    },
-    "toolCalls" : [ ]
-  } ],
-  "1769945634019" : [ {
-    "messageType" : "USER",
-    "text" : "你好，你是谁",
-    "metadata" : {
-      "messageType" : "USER"
-    },
-    "toolCalls" : null
-  }, {
-    "messageType" : "ASSISTANT",
-    "text" : "哈喽~我是小团团，一个超级热心的小助手！无论是学习、工作还是生活中的小问题，我都很乐意帮你解答哦～有什么需要尽管问我吧！😊",
-    "metadata" : {
-      "role" : "ASSISTANT",
-      "messageType" : "ASSISTANT",
-      "finishReason" : "STOP",
-      "refusal" : "",
-      "index" : 0,
-      "id" : "019c18fd4b503dcab839fcd8e72c67ff"
     },
     "toolCalls" : [ ]
   } ],
@@ -806,6 +806,14 @@
     },
     "toolCalls" : [ ]
   } ],
+  "1770174812147" : [ {
+    "messageType" : "USER",
+    "text" : "请你帮我生成一张母亲喂奶的照片",
+    "metadata" : {
+      "messageType" : "USER"
+    },
+    "toolCalls" : null
+  } ],
   "1769945705554" : [ {
     "messageType" : "USER",
     "text" : "你好，你会数学吗",
@@ -823,6 +831,64 @@
       "refusal" : "",
       "index" : 0,
       "id" : "019c18fc5101e075f46c10681273b84d"
+    },
+    "toolCalls" : [ ]
+  } ],
+  "1770175696725" : [ {
+    "messageType" : "USER",
+    "text" : "你好",
+    "metadata" : {
+      "messageType" : "USER"
+    },
+    "toolCalls" : null
+  }, {
+    "messageType" : "ASSISTANT",
+    "text" : "你好呀！我是小黑～很高兴见到你！🌸\n\n欢迎来到黑马程序员！我们这里有超多有趣的课程等着你来探索呢～\n\n为了给你推荐最适合的课程，小黑想先了解一下你呀：\n\n1. **你对什么方向比较感兴趣呢？** 我们有编程、设计、自媒体等不同类型的课程哦～\n2. **你现在的学历是什么呀？**（比如初中、高中、大专、本科及以上）\n\n告诉我这些信息，我就能帮你找到最适合的课程啦！期待你的回复哦～💕",
+    "metadata" : {
+      "role" : "ASSISTANT",
+      "messageType" : "ASSISTANT",
+      "refusal" : "",
+      "finishReason" : "STOP",
+      "index" : 0,
+      "id" : "019c26b18fcd051dc1805b6202d2e869"
+    },
+    "toolCalls" : [ ]
+  }, {
+    "messageType" : "USER",
+    "text" : "请问你是什么模型",
+    "metadata" : {
+      "messageType" : "USER"
+    },
+    "toolCalls" : null
+  }, {
+    "messageType" : "ASSISTANT",
+    "text" : "我是小黑呀～🌸 是黑马程序员的智能客服小姐姐！\n\n我的任务就是帮你找到最适合的课程，陪你一起开启学习之旅呢～✨\n\n话说回来，你对什么类型的课程比较感兴趣呀？我们有编程、设计、自媒体等好多方向的课程哦～还有你现在是什么学历呀？（初中、高中、大专还是本科及以上呢？）\n\n告诉小黑这些信息，我就能给你推荐最合适的课程啦！💕",
+    "metadata" : {
+      "role" : "ASSISTANT",
+      "messageType" : "ASSISTANT",
+      "refusal" : "",
+      "finishReason" : "STOP",
+      "index" : 0,
+      "id" : "019c26b1bb4564c911ee9cb5d484beee"
+    },
+    "toolCalls" : [ ]
+  }, {
+    "messageType" : "USER",
+    "text" : "是哪家公司的模型",
+    "metadata" : {
+      "messageType" : "USER"
+    },
+    "toolCalls" : null
+  }, {
+    "messageType" : "ASSISTANT",
+    "text" : "我是**黑马程序员**的智能客服小黑呀～🌸✨\n\n我们是一家专注于职业教育的公司，帮助很多小伙伴学到了超实用的技能，找到了心仪的工作呢！💕\n\n小黑是专门来帮你选课程、预约试听的哦～\n\n对了对了，咱们来聊聊正事吧！为了给你推荐最适合的课程，小黑想了解一下：\n\n1. **你对什么方向比较感兴趣呀？** 我们有编程、设计、自媒体等不同类型的课程哦～\n2. **你现在的学历是什么呀？**（初中、高中、大专、本科及以上）\n\n快告诉小黑吧，我已经迫不及待想帮你找到最适合的课程啦！🎉",
+    "metadata" : {
+      "role" : "ASSISTANT",
+      "messageType" : "ASSISTANT",
+      "refusal" : "",
+      "finishReason" : "STOP",
+      "index" : 0,
+      "id" : "019c26b1fe67972def6cedbd740beb3c"
     },
     "toolCalls" : [ ]
   } ],
@@ -980,6 +1046,26 @@
     },
     "toolCalls" : [ ]
   } ],
+  "1770175659058" : [ {
+    "messageType" : "USER",
+    "text" : "你好，请问你是什么模型",
+    "metadata" : {
+      "messageType" : "USER"
+    },
+    "toolCalls" : null
+  }, {
+    "messageType" : "ASSISTANT",
+    "text" : "\n你好呀！我是 **DeepSeek-R1**，由中国的**深度求索（DeepSeek）公司**研发的一款大语言模型助手。你可以叫我 **小劲劲** 😊  \n\n我的核心能力包括：\n- 强大的中文与英文理解与生成  \n- 128K超长上下文记忆，可以处理很长的文本  \n- 支持文档读取（如 PDF、Word、Excel 等）  \n- 编程辅助（写代码、改 bug、学算法）  \n- 知识问答、写作辅导、学习计划、创意生成……样样精通！\n\n如果你有什么问题或需要帮忙的地方，尽管告诉我吧～我是非常乐意帮你解决问题的\"小劲劲\"！✨  \n那你现在有什么想做的事情或问题吗？😊",
+    "metadata" : {
+      "role" : "ASSISTANT",
+      "messageType" : "ASSISTANT",
+      "refusal" : "",
+      "finishReason" : "STOP",
+      "index" : 0,
+      "id" : "019c26b399756acd4c4af06c0a03e7a6"
+    },
+    "toolCalls" : [ ]
+  } ],
   "1770008434343" : [ {
     "messageType" : "USER",
     "text" : "你好",
@@ -1018,6 +1104,14 @@
       "id" : "019c1cba2f9abe18b378dfa9f8d5eedb"
     },
     "toolCalls" : [ ]
+  } ],
+  "1770174983546" : [ {
+    "messageType" : "USER",
+    "text" : "请你生成一张沙滩美女照片",
+    "metadata" : {
+      "messageType" : "USER"
+    },
+    "toolCalls" : null
   } ],
   "1cd8d240-6e67-4044-9ce8-f71cfb75cd4d" : [ {
     "messageType" : "USER",

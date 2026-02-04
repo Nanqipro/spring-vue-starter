@@ -11,7 +11,7 @@ spring:
       api-key: ${OPENAI_API_KEY}
       chat:
         options:
-          model: deepseek-ai/DeepSeek-R1
+          model: Pro/moonshotai/Kimi-K2.5
       embedding:
         options:
           model: Qwen/Qwen3-Embedding-8B
