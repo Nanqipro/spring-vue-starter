@@ -1,0 +1,9 @@
+/Users/nanpipro/Documents/gitlocal/spring-vue-starter/consultant/src/main/java/com/itheima/consultant/ConsultantApplication.java
+/Users/nanpipro/Documents/gitlocal/spring-vue-starter/consultant/src/main/java/com/itheima/consultant/aiservice/ConsultantService.java
+/Users/nanpipro/Documents/gitlocal/spring-vue-starter/consultant/src/main/java/com/itheima/consultant/config/CommonConfig.java
+/Users/nanpipro/Documents/gitlocal/spring-vue-starter/consultant/src/main/java/com/itheima/consultant/controller/ChatController.java
+/Users/nanpipro/Documents/gitlocal/spring-vue-starter/consultant/src/main/java/com/itheima/consultant/mapper/ReservationMapper.java
+/Users/nanpipro/Documents/gitlocal/spring-vue-starter/consultant/src/main/java/com/itheima/consultant/pojo/Reservation.java
+/Users/nanpipro/Documents/gitlocal/spring-vue-starter/consultant/src/main/java/com/itheima/consultant/repository/RedisChatMemoryStore.java
+/Users/nanpipro/Documents/gitlocal/spring-vue-starter/consultant/src/main/java/com/itheima/consultant/service/ReservationService.java
+/Users/nanpipro/Documents/gitlocal/spring-vue-starter/consultant/src/main/java/com/itheima/consultant/tools/ReservationTool.java
